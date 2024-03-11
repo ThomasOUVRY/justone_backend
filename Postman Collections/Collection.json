@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "346fa13a-849e-4e28-ae26-1178db15dcd9",
+		"name": "JustOne",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hello world",
+			"id": "6380052a-6827-40df-9d1e-6f3105c2f7a6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a game",
+			"id": "e7302ac1-a9d1-4627-a98d-a504b1bf4456",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "{{url}}/game"
+			},
+			"response": []
+		},
+		{
+			"name": "Find all games",
+			"id": "0ae0c08f-a1f9-4b92-beb0-c4538b1df23f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/game"
+			},
+			"response": []
+		},
+		{
+			"name": "Get game details",
+			"id": "bfb1e4a3-cdaa-496b-9197-4ecfabdd04d1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/game/:code",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						":code"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "X966"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Join game",
+			"id": "856a1384-2a04-4e2d-bb4f-613491f333a3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameCode\": \"X966\",\r\n    \"name\": \"toto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/join"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c45fe143-9438-481e-88de-18af6e1fc7ac",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "cb46ff2a-245d-48e3-92f2-3f87b3f2042a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
