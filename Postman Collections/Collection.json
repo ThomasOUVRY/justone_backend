@@ -27,7 +27,7 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": "{{url}}/game"
+				"url": "{{url}}/games"
 			},
 			"response": []
 		},
@@ -40,7 +40,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{url}}/game"
+				"url": "{{url}}/games"
 			},
 			"response": []
 		},
