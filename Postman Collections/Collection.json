@@ -93,6 +93,28 @@
 				"url": "{{url}}/join"
 			},
 			"response": []
+		},
+		{
+			"name": "Start game",
+			"id": "7280a642-8faa-4461-965e-645525f5c031",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameCode\": \"X966\",\r\n    \"name\": \"totsasao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/games/start"
+			},
+			"response": []
 		}
 	],
 	"event": [
