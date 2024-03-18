@@ -73,6 +73,35 @@
 			"response": []
 		},
 		{
+			"name": "Get game details Copy",
+			"id": "aac5e222-a665-4001-b5c9-eef0991ade75",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/games/:code/connectedPlayers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"games",
+						":code",
+						"connectedPlayers"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "U0P9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Join game",
 			"id": "856a1384-2a04-4e2d-bb4f-613491f333a3",
 			"protocolProfileBehavior": {
@@ -83,7 +112,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"gameCode\": \"X966\",\r\n    \"name\": \"totsasao\"\r\n}",
+					"raw": "{\r\n    \"gameCode\": \"2006\",\r\n    \"name\": \"totsasao\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -91,6 +120,28 @@
 					}
 				},
 				"url": "{{url}}/join"
+			},
+			"response": []
+		},
+		{
+			"name": "Join game Copy",
+			"id": "0fe66894-8b4c-4035-837c-d1ad83bdb31d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameCode\": \"2006\",\r\n    \"name\": \"totsasao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/leave"
 			},
 			"response": []
 		},
@@ -105,7 +156,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"gameCode\": \"X966\",\r\n    \"name\": \"totsasao\"\r\n}",
+					"raw": "{\r\n    \"gameCode\": \"X966\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -113,6 +164,170 @@
 					}
 				},
 				"url": "{{url}}/games/start"
+			},
+			"response": []
+		},
+		{
+			"name": "Get game config",
+			"id": "e977e868-41eb-4795-aacc-7f45d69a67f5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameCode\": \"X966\",\r\n    \"name\": \"totsasao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/games/:code/justone/configure",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"games",
+						":code",
+						"justone",
+						"configure"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "XNCJ"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get unique hints for game",
+			"id": "6dc82148-9be7-4fa5-9b39-ab195d0ea27a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameCode\": \"X966\",\r\n    \"name\": \"totsasao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/games/:code/justone/hint/unique?round=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"games",
+						":code",
+						"justone",
+						"hint",
+						"unique"
+					],
+					"query": [
+						{
+							"key": "round",
+							"value": "1"
+						}
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "U0P9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Give hint for round",
+			"id": "729d944f-cbf3-4e90-bb39-3be0e4a704c8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"word\": \"plipop\",\r\n   \"roundNb\": 1,\r\n   \"playerName\": \"Thomas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/games/:code/justone/hint",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"games",
+						":code",
+						"justone",
+						"hint"
+					],
+					"variable": [
+						{
+							"id": "bde3a78e-3851-4f09-9756-48f4d6538fe2",
+							"key": "code",
+							"value": "U0P9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Next round for justone",
+			"id": "3c7f2742-3b34-43d5-bd0c-bdbc529935f2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/games/:code/justone/nextRound",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"games",
+						":code",
+						"justone",
+						"nextRound"
+					],
+					"variable": [
+						{
+							"key": "code",
+							"value": "2IRY"
+						}
+					]
+				}
 			},
 			"response": []
 		}
