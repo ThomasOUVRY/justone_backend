@@ -19,6 +19,19 @@
 			"response": []
 		},
 		{
+			"name": "Hello world Copy",
+			"id": "62af39be-9347-4083-bacf-8372a84480c9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}"
+			},
+			"response": []
+		},
+		{
 			"name": "Create a game",
 			"id": "e7302ac1-a9d1-4627-a98d-a504b1bf4456",
 			"protocolProfileBehavior": {
