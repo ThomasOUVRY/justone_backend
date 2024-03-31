@@ -169,14 +169,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"gameCode\": \"X966\"\r\n}",
+					"raw": "{\r\n    \"gameCode\": \"KTLL\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{url}}/games/start"
+				"url": "http://192.168.1.41:3000/games/start"
 			},
 			"response": []
 		},
